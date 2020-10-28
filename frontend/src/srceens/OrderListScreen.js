@@ -32,19 +32,19 @@ const OrderListScreen = {
     <div class="dashboard">
     ${DashboardMenu.render({ selected: 'orders' })}
     <div class="dashboard-content">
-      <h1>Orders</h1>
+      <h1>Заказы</h1>
        
       <div class="order-list">
         <table>
           <thead>
             <tr>
               <th>ID</th>
-              <th>DATE</th>
-              <th>TOTAL</th>
-              <th>USER</th>
-              <th>PAID AT</th>
-              <th>DELIVERED AT</th>
-              <th class="tr-action">ACTION</th>
+              <th>Дата</th>
+              <th>К оплате</th>
+              <th>Логин</th>
+              <th>Оплачено</th>
+              <th>Доставлено</th>
+              <th class="tr-action">Действия</th>
             <tr>
           </thead>
           <tbody>
@@ -59,8 +59,8 @@ const OrderListScreen = {
               <td>${order.paidAt || 'No'}</td>
               <td>${order.deliveredAt || 'No'}</td>
               <td>
-              <button id="${order._id}" class="edit-button">Edit</button>
-              <button id="${order._id}" class="delete-button">Delete</button>
+              <button id="${order._id}" class="edit-button">Редактировать</button>
+              <button id="${order._id}" class="delete-button">Удалить</button>
               </td>
             </tr>
             `

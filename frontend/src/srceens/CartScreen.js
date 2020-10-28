@@ -67,12 +67,12 @@ const CartScreen = {
       <div class="cart-list">
         <ul class="cart-list-container">
           <li>
-            <h3>Shopping Cart</h3>
-            <div>Price</div>
+            <h3>Корзина</h3>
+            <div>Сумма</div>
           </li>
           ${
             cartItems.length === 0
-              ? '<div>Cart is empty. <a href="/#/">Go Shopping</a>'
+              ? '<div>Корзина пуст.<a href="/#/">Вперёд за покупками!</a>'
               : cartItems
                   .map(
                     (item) => `
@@ -87,7 +87,7 @@ const CartScreen = {
                   </a>
                 </div>
                 <div>
-                  Qty: 
+                  Кол-во: 
                   <select class="qty-select" id="${item.product}">
                   ${[...Array(item.countInStock).keys()].map((x) =>
                     item.qty === x + 1
@@ -99,7 +99,7 @@ const CartScreen = {
                   <button type="button" class="delete-button" id="${
                     item.product
                   }">
-                    Delete
+                    Удалить
                   </button>
                 </div>
               </div>
@@ -115,12 +115,12 @@ const CartScreen = {
       </div>
       <div class="cart-action">
           <h3>
-            Subtotal (${cartItems.reduce((a, c) => a + c.qty, 0)} items)
+            Итого (${cartItems.reduce((a, c) => a + c.qty, 0)})
             :
             $${cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
           </h3>
           <button id="checkout-button" class="primary fw">
-            Proceed to Checkout
+          Перейти к оформлению заказа
           </button>
       </div>
     </div>

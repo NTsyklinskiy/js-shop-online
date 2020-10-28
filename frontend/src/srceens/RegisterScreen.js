@@ -32,31 +32,31 @@ const RegisterScreen = {
       <form id="register-form">
         <ul class="form-items">
           <li>
-            <h1>Create Account</h1>
+            <h1>Регистрация</h1>
           </li>
           <li>
-            <label for="name">Name</label>
+            <label for="name">Логин</label>
             <input type="name" name="name" id="name" />
           </li>
           <li>
-            <label for="email">Email</label>
+            <label for="email">Почта</label>
             <input type="email" name="email" id="email" />
           </li>
           <li>
-            <label for="password">Password</label>
+            <label for="password">Пароль</label>
             <input type="password" name="password" id="password" />
           </li>
           <li>
-            <label for="repassword">Re-Enter Password</label>
+            <label for="repassword">Повторите Пароль</label>
             <input type="password" name="repassword" id="repassword" />
           </li>
           <li>
-            <button type="submit" class="primary">Register</button>
+            <button type="submit" class="primary">Регистрация</button>
           </li>
           <li>
             <div>
-              Already have an account?
-              <a href="/#/signin">Sign-In </a>
+            Уже есть аккаунт?
+              <a href="/#/signin">Войти</a>
             </div>
           </li>
         </ul>

@@ -4,9 +4,11 @@ export const getCartItems = () => {
     : [];
   return cartItems;
 };
+
 export const setCartItems = (cartItems) => {
   localStorage.setItem('cartItems', JSON.stringify(cartItems));
 };
+
 export const setUserInfo = ({
   _id = '',
   name = '',
@@ -27,14 +29,17 @@ export const setUserInfo = ({
     })
   );
 };
+
 export const clearUser = () => {
   localStorage.removeItem('userInfo');
 };
+
 export const getUserInfo = () => {
   return localStorage.getItem('userInfo')
     ? JSON.parse(localStorage.getItem('userInfo'))
     : { name: '', email: '', password: '' };
 };
+
 export const getShipping = () => {
   const shipping = localStorage.getItem('shipping')
     ? JSON.parse(localStorage.getItem('shipping'))
@@ -46,6 +51,7 @@ export const getShipping = () => {
       };
   return shipping;
 };
+
 export const setShipping = ({
   address = '',
   city = '',
@@ -66,9 +72,11 @@ export const getPayment = () => {
       };
   return payment;
 };
+
 export const setPayment = ({ paymentMethod = 'paypal' }) => {
   localStorage.setItem('payment', JSON.stringify({ paymentMethod }));
 };
+
 export const cleanCart = () => {
   localStorage.removeItem('cartItems');
 };

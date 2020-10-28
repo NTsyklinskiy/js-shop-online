@@ -5,16 +5,16 @@ const Header = {
     const { name, isAdmin } = getUserInfo();
     return ` 
   <div class="brand">
-    <a href="/#/">jsamazona</a>
+    <a href="/#/">ShopOnline</a>
   </div>
   <div>
   ${
     name
       ? `<a href="/#/profile">${name}</a>`
-      : `<a href="/#/signin">Sign-In</a>`
+      : `<a href="/#/signin">Вход</a>`
   }    
-    <a href="/#/cart">Cart</a>
-    ${isAdmin ? `<a href="/#/dashboard">Dashboard</a>` : ''}
+    <a href="/#/cart">Каталог</a>
+    ${isAdmin ? `<a href="/#/dashboard">Панель Администратора</a>` : ''}
   </div>`;
   },
   after_render: () => {},

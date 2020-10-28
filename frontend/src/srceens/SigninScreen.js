@@ -31,23 +31,24 @@ const SigninScreen = {
       <form id="signin-form">
         <ul class="form-items">
           <li>
-            <h1>Sign-In</h1>
+            <h1>Вход</h1>
           </li>
           <li>
-            <label for="email">Email</label>
+            <label for="email">Почта</label>
             <input type="email" name="email" id="email" />
           </li>
           <li>
-            <label for="password">Password</label>
+            <label for="password">Пароль</label>
             <input type="password" name="password" id="password" />
           </li>
           <li>
-            <button type="submit" class="primary">Signin</button>
+            <button type="submit" class="primary">Войти</button>
           </li>
           <li>
             <div>
-              New User?
-              <a href="/#/register">Create your account </a>
+            Новый пользователь?
+              <a href="/#/register">Создать учетную запись
+              </a>
             </div>
           </li>
         </ul>

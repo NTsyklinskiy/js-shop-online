@@ -40,47 +40,47 @@ const ProfileScreen = {
       <form id="profile-form">
         <ul class="form-items">
           <li>
-            <h1>User Profile</h1>
+            <h1>Профиль</h1>
           </li>
           <li>
-            <label for="name">Name</label>
+            <label for="name">Логин</label>
             <input type="name" name="name" id="name" value="${name}" />
           </li>
           <li>
-            <label for="email">Email</label>
+            <label for="email">Почта</label>
             <input type="email" name="email" id="email" value="${email}" />
           </li>
           <li>
-            <label for="password">Password</label>
+            <label for="password">Пароль</label>
             <input type="password" name="password" id="password" />
           </li>
           <li>
-            <button type="submit" class="primary">Update</button>
+            <button type="submit" class="primary">Обновить</button>
           </li>
           <li>
-          <button type="button" id="signout-button" >Sign Out</button>
+          <button type="button" id="signout-button" >Выйти</button>
         </li>        
         </ul>
       </form>
     </div>
       </div>
       <div class="profile-orders">
-      <h2>Order History</h2>
+      <h2>История заказов</h2>
         <table>
           <thead>
             <tr>
-              <th>ORDER ID</th>
-              <th>DATE</th>
-              <th>TOTAL</th>
-              <th>PAID</th>
-              <th>DELIVERED</th>
-              <th>ACTIONS</th>
+              <th>Номер заказа</th>
+              <th>Дата</th>
+              <th>Всего к оплате</th>
+              <th>Оплта</th>
+              <th>Доставка</th>
+              <th>Действия</th>
             </tr>
           </thead>
           <tbody>
             ${
               orders.length === 0
-                ? `<tr><td colspan="6">No Order Found.</tr>`
+                ? `<tr><td colspan="6">Заказ не найден.</tr>`
                 : orders
                     .map(
                       (order) => `
@@ -90,7 +90,7 @@ const ProfileScreen = {
             <td>${order.totalPrice}</td>
             <td>${order.paidAt || 'No'}</td>
             <td>${order.deliveryAt || 'No'}</td>
-            <td><a href="/#/order/${order._id}">DETIALS</a> </td>
+            <td><a href="/#/order/${order._id}">Детали</a> </td>
           </tr>
           `
                     )

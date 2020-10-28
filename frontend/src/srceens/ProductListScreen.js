@@ -38,20 +38,20 @@ const ProductListScreen = {
     <div class="dashboard">
     ${DashboardMenu.render({ selected: 'products' })}
     <div class="dashboard-content">
-      <h1>Products</h1>
+      <h1>Товары</h1>
       <button id="create-product-button" class="primary">
-        Create Product
+        Добавить Товар
       </button>
       <div class="product-list">
         <table>
           <thead>
             <tr>
               <th>ID</th>
-              <th>NAME</th>
-              <th>PRICE</th>
-              <th>CATEGORY</th>
-              <th>BRAND</th>
-              <th class="tr-action">ACTION</th>
+              <th>Имя</th>
+              <th>Цена</th>
+              <th>Категория</th>
+              <th>Бренд</th>
+              <th class="tr-action">Действия</th>
             <tr>
           </thead>
           <tbody>
@@ -65,8 +65,8 @@ const ProductListScreen = {
               <td>${product.category}</td>
               <td>${product.brand}</td>
               <td>
-              <button id="${product._id}" class="edit-button">Edit</button>
-              <button id="${product._id}" class="delete-button">Delete</button>
+              <button id="${product._id}" class="edit-button">Редактировать</button>
+              <button id="${product._id}" class="delete-button">Удалить</button>
               </td>
             </tr>
             `

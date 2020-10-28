@@ -3,8 +3,8 @@ const Error404Screen = {
     return `
     <div class="container py-md-5 container--narrow">
       <div class="text-center">
-        <h2>Whoops, we cannot find that page.</h2>
-        <p class="lead text-muted">You can always   visit the <a href="/">homepage</a> to get a   fresh start.</p>
+        <h2>Упс, мы не можем найти эту страницу.</h2>
+        <p class="lead text-muted">Вы всегда можете посетить <a href="/">ShopOnline</a>, чтобы начать все сначала.</p>
       </div> 
     </div>`
   },

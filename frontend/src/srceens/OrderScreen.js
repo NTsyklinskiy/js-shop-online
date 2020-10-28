@@ -79,7 +79,7 @@ const OrderScreen = {
         showLoading();
         await deliverOrder(request.id);
         hideLoading();
-        showMessage('Order Delivered.');
+        showMessage('Товар доставлен.');
         rerender(OrderScreen);
       });
   },
@@ -105,38 +105,38 @@ const OrderScreen = {
     }
     return `
     <div>
-    <h1>Order ${_id}</h1>
+    <h1>Заказ ${_id}</h1>
       <div class="order">
         <div class="order-info">
           <div>
-            <h2>Shipping</h2>
+            <h2>Доставка</h2>
             <div>
             ${shipping.address}, ${shipping.city}, ${shipping.postalCode}, 
             ${shipping.country}
             </div>
             ${
               isDelivered
-                ? `<div class="success">Delivered at ${deliveredAt}</div>`
-                : `<div class="error">Not Delivered</div>`
+                ? `<div class="success">Доставлен ${deliveredAt}</div>`
+                : `<div class="error">Не доставлен</div>`
             }
              
           </div>
           <div>
-            <h2>Payment</h2>
+            <h2>Оплата</h2>
             <div>
-              Payment Method : ${payment.paymentMethod}
+              Способ оплаты: ${payment.paymentMethod}
             </div>
             ${
               isPaid
-                ? `<div class="success">Paid at ${paidAt}</div>`
-                : `<div class="error">Not Paid</div>`
+                ? `<div class="success">Оплачен ${paidAt}</div>`
+                : `<div class="error">Не Оплачено</div>`
             }
           </div>
           <div>
             <ul class="cart-list-container">
               <li>
-                <h2>Shopping Cart</h2>
-                <div>Price</div>
+                <h2>Корзина</h2>
+                <div>Цена</div>
               </li>
               ${orderItems
                 .map(
@@ -149,7 +149,7 @@ const OrderScreen = {
                     <div>
                       <a href="/#/product/${item.product}">${item.name} </a>
                     </div>
-                    <div> Qty: ${item.qty} </div>
+                    <div> Кол-во: ${item.qty} </div>
                   </div>
                   <div class="cart-price"> $${item.price}</div>
                 </li>
@@ -162,17 +162,17 @@ const OrderScreen = {
         <div class="order-action">
            <ul>
                 <li>
-                  <h2>Order Summary</h2>
+                  <h2>Итог Заказа</h2>
                  </li>
-                 <li><div>Items</div><div>$${itemsPrice}</div></li>
-                 <li><div>Shipping</div><div>$${shippingPrice}</div></li>
-                 <li><div>Tax</div><div>$${taxPrice}</div></li>
-                 <li class="total"><div>Order Total</div><div>$${totalPrice}</div></li>                  
+                 <li><div>Товар</div><div>$${itemsPrice}</div></li>
+                 <li><div>Доставка</div><div>$${shippingPrice}</div></li>
+                 <li><div>Налог</div><div>$${taxPrice}</div></li>
+                 <li class="total"><div>Итого к оплате</div><div>$${totalPrice}</div></li>                  
                  <li><div class="fw" id="paypal-button"></div></li>
                  <li>
                  ${
                    isPaid && !isDelivered && isAdmin
-                     ? `<button id="deliver-order-button" class="primary fw">Deliver Order</button>`
+                     ? `<button id="deliver-order-button" class="primary fw">Доставить заказ</button>`
                      : ''
                  }
                  <li>

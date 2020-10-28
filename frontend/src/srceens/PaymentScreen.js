@@ -25,7 +25,7 @@ const PaymentScreen = {
       <form id="payment-form">
         <ul class="form-items">
           <li>
-            <h1>Payment</h1>
+            <h1>Оплата</h1>
           </li>
           <li>
             <div>
@@ -48,7 +48,7 @@ const PaymentScreen = {
            </div> 
         </li>
           <li>
-            <button type="submit" class="primary">Continue</button>
+            <button type="submit" class="primary">Продолжить</button>
           </li>        
         </ul>
       </form>

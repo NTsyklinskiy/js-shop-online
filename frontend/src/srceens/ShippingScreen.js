@@ -28,27 +28,28 @@ const ShippingScreen = {
       <form id="shipping-form">
         <ul class="form-items">
           <li>
-            <h1>Shipping</h1>
+            <h1>Адрес</h1>
           </li>
           <li>
-            <label for="address">Adress</label>
+            <label for="address">Улица</label>
             <input type="text" name="address" id="address" value="${address}" />
           </li>
           <li>
-            <label for="city">City</label>
+            <label for="city">Город</label>
             <input type="text" name="city" id="city" value="${city}" />
           </li>
           <li>
-            <label for="postalCode">Postal Code</label>
+            <label for="postalCode">Почтовый Код
+            </label>
             <input type="text" name="postalCode" id="postalCode" value="${postalCode}" />
           </li>
           <li>
-            <label for="country">Country</label>
+            <label for="country">Страна</label>
             <input type="text" name="country" id="country" value="${country}" />
           </li>
 
           <li>
-            <button type="submit" class="primary">Continue</button>
+            <button type="submit" class="primary">Продолжить</button>
           </li>        
         </ul>
       </form>

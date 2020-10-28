@@ -73,23 +73,23 @@ const PlaceOrderScreen = {
       <div class="order">
         <div class="order-info">
           <div>
-            <h2>Shipping</h2>
+            <h2>Доставка</h2>
             <div>
             ${shipping.address}, ${shipping.city}, ${shipping.postalCode}, 
             ${shipping.country}
             </div>
           </div>
           <div>
-            <h2>Payment</h2>
+            <h2>Оплата</h2>
             <div>
-              Payment Method : ${payment.paymentMethod}
+              Метод Оплты : ${payment.paymentMethod}
             </div>
           </div>
           <div>
             <ul class="cart-list-container">
               <li>
-                <h2>Shopping Cart</h2>
-                <div>Price</div>
+                <h2>Корзина</h2>
+                <div>Цена</div>
               </li>
               ${orderItems
                 .map(
@@ -102,7 +102,7 @@ const PlaceOrderScreen = {
                     <div>
                       <a href="/#/product/${item.product}">${item.name} </a>
                     </div>
-                    <div> Qty: ${item.qty} </div>
+                    <div> Кол-во: ${item.qty} </div>
                   </div>
                   <div class="cart-price"> $${item.price}</div>
                 </li>
@@ -115,15 +115,15 @@ const PlaceOrderScreen = {
         <div class="order-action">
            <ul>
                 <li>
-                  <h2>Order Summary</h2>
+                  <h2>Итог заказа</h2>
                  </li>
-                 <li><div>Items</div><div>$${itemsPrice}</div></li>
-                 <li><div>Shipping</div><div>$${shippingPrice}</div></li>
-                 <li><div>Tax</div><div>$${taxPrice}</div></li>
-                 <li class="total"><div>Order Total</div><div>$${totalPrice}</div></li> 
+                 <li><div>Товар</div><div>$${itemsPrice}</div></li>
+                 <li><div>Доставка</div><div>$${shippingPrice}</div></li>
+                 <li><div>Налог</div><div>$${taxPrice}</div></li>
+                 <li class="total"><div>Итого к оплате</div><div>$${totalPrice}</div></li> 
                  <li>
                  <button id="placeorder-button" class="primary fw">
-                 Place Order
+                 Разместить заказ
                  </button>
         </div>
       </div>

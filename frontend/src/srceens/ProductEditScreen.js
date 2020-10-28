@@ -54,59 +54,59 @@ const ProductEditScreen = {
     return `
     <div class="content">
       <div>
-        <a href="/#/productlist">Back to products</a>
+        <a href="/#/productlist">Вернуться</a>
       </div>
       <div class="form-container">
         <form id="edit-product-form">
           <ul class="form-items">
             <li>
-              <h1>Edit Product ${product._id.substring(0, 8)}</h1>
+              <h1>Редактировать продукт${product._id.substring(0, 8)}</h1>
             </li>
             <li>
-              <label for="name">Name</label>
+              <label for="name">Название</label>
               <input type="text" name="name" value="${
                 product.name
               }" id="name" />
             </li>
             <li>
-              <label for="price">Price</label>
+              <label for="price">Цена</label>
               <input type="number" name="price" value="${
                 product.price
               }" id="price" />
             </li>
             <li>
-              <label for="image">Image (680 x 830)</label>
+              <label for="image">Фото (680 x 830)</label>
               <input type="text" name="image" value="${
                 product.image
               }" id="image" />
               <input type="file" name="image-file" id="image-file" />
             </li>
             <li>
-              <label for="brand">Brand</label>
+              <label for="brand">Бренд</label>
               <input type="text" name="brand" value="${
                 product.brand
               }" id="brand" />
             </li>
             <li>
-              <label for="countInStock">Count In Stock</label>
+              <label for="countInStock">В наличии</label>
               <input type="text" name="countInStock" value="${
                 product.countInStock
               }" id="countInStock" />
             </li>
             <li>
-              <label for="category">Category</label>
+              <label for="category">Категория</label>
               <input type="text" name="category" value="${
                 product.category
               }" id="category" />
             </li>
             <li>
-              <label for="description">Description</label>
+              <label for="description">Описание</label>
               <input type="text" name="description" value="${
                 product.description
               }" id="description" />
             </li>
             <li>
-              <button type="submit" class="primary">Update</button>
+              <button type="submit" class="primary">Обновить</button>
             </li>
           </ul>
         </form>
